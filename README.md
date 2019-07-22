@@ -28,6 +28,8 @@ Label noise is one of the most explicit cases where some observations and their 
 
   b. Training based on carefully-designed curriculums
 
+  ...
+
 **Without using extra networks**: e.g., 
 
   a. Decoupling" when to update" from" how to update"  
@@ -87,12 +89,14 @@ Please see [our paper](https://arxiv.org/pdf/1905.11233.pdf):
 ## Citation
 Please kindly cite us if you find our work useful and inspiring.
 
+```bash
 @article{wang2019emphasis,
   title={Emphasis Regularisation by Gradient Rescaling for Training Deep Neural Networks with Noisy Labels},
   author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil},
   journal={arXiv preprint arXiv:1905.11233},
   year={2019}
 }
+```
 
 
 
