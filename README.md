@@ -76,7 +76,7 @@ to learning from noisy labels
   ...
 
 
-## Effective
+## Effective (Qualitative and Quantitative Results)
 
 Please see [our paper](https://arxiv.org/pdf/1905.11233.pdf): 
 
