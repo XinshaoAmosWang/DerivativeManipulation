@@ -63,12 +63,15 @@ scalable image classifier training with label noise
   a. Generalized cross entropy loss for training deep neural networks
 with noisy labels.   
   ...
-* Without relabelling: e.g.,
+
+**Without relabelling**: e.g.,
 
   a. A semi-supervised two-stage approach
 to learning from noisy labels
 
-  b. 
+  b. Joint optimization framework for learning with noisy labels
+
+  ...
 
 
 ## Effective
@@ -128,3 +131,6 @@ to learning from noisy labels. In WACV, 2018.
 
 * Hwanjun Song, Minseok Kim, and Jae-Gil Lee. Selfie: Refurbishing unclean samples for robust
 deep learning. In ICML, 2019.
+
+
+* Daiki Tanaka, Daiki Ikami, Toshihiko Yamasaki, and Kiyoharu Aizawa. Joint optimization framework for learning with noisy labels. In CVPR, 2018.
