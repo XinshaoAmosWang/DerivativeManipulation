@@ -3,7 +3,7 @@ Project page for [Emphasis Regularisation by Gradient Rescaling ](https://arxiv.
 
 General applicability: Label noise (semantic noise),  outliers,  heavy perceptual data noise, etc. 
 
-It is reasonable to assume that there is semantic noise in large-scale training datasets: 
+**It is reasonable to assume that there is semantic noise in large-scale training datasets**: 
 * Class labels may be missing. 
 * The labelling process may be subjective. 
 
