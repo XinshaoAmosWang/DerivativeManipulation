@@ -13,7 +13,7 @@ Label noise is one of the most explicit cases where some observations and their 
 
 ## Introduction
 
-**Research questions:**
+**Research question:**
 * What training examples should be focused and how much more should they be emphasised when training DNNs under label noise? 
 
   **When noise rate is higher, we can improve a model's robustness by focusing on relatively less difficult examples.** 
