@@ -76,6 +76,8 @@ to learning from noisy labels
 
 ## Effective
 
+Please see [our paper](https://arxiv.org/pdf/1905.11233.pdf): 
+
 * Outperform existing work on synthetic label noise;
 * Outperform existing work on unknown real-world noise. 
 
@@ -92,7 +94,7 @@ Please kindly cite us if you find our work useful and inspiring.
   year={2019}
 }
 
-We will release our code when it is published somewhere. 
+
 
 ## References
 
