@@ -9,7 +9,7 @@ It is reasonable to assume that there is semantic noise in large-scale training 
 
 
 
-Label noise is one of the most explict cases where some observations and their labels are not matched in the training data. In this case, it is quite crucial to make your models learn meaningful patterns instead of errors.
+Label noise is one of the most explicit cases where some observations and their labels are not matched in the training data. In this case, it is quite crucial to make your models learn meaningful patterns instead of errors.
 
 ## Introduction
 
