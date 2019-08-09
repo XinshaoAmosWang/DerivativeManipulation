@@ -20,6 +20,8 @@ Label noise is one of the most explicit cases where some observations and their 
 
   [More comments and comparison with related work](https://www.researchgate.net/publication/333418661_Emphasis_Regularisation_by_Gradient_Rescaling_for_Training_Deep_Neural_Networks_with_Noisy_Labels/comments)
 
+[Paper reading about outlier detection and robust inference](https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing)
+
 ## Extremely Simple
 
 **Without advanced training strategies**: e.g., 
