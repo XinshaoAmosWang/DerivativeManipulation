@@ -13,14 +13,38 @@ Label noise is one of the most explicit cases where some observations and their 
 
 ## Introduction
 
-**Research question:**
+* **Main contribution:** Intuitively and principally, we claim that two basic factors, what examples
+get higher weights (emphasis focus) and how large variance over examples’ weights (emphasis
+spread), should be babysit simultaneously when it comes to sample differentiation and reweighting.
+Unfortunately, these two intuitive and indispensable factors are not studied together in the literature.
+
 * What training examples should be focused and how much more should they be emphasised when training DNNs under label noise? 
 
   **When noise rate is higher, we can improve a model's robustness by focusing on relatively less difficult examples.** 
 
-  [More comments and comparison with related work](https://www.researchgate.net/publication/333418661_Emphasis_Regularisation_by_Gradient_Rescaling_for_Training_Deep_Neural_Networks_with_Noisy_Labels/comments)
+[More comments and comparison with related work](https://www.researchgate.net/publication/333418661_Emphasis_Regularisation_by_Gradient_Rescaling_for_Training_Deep_Neural_Networks_with_Noisy_Labels/comments)
 
 [Paper reading about outlier detection and robust inference](https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing)
+
+
+## Effective (Qualitative and Quantitative Results)
+
+Please see [our paper](https://arxiv.org/pdf/1905.11233.pdf): 
+
+* Outperform existing work on synthetic label noise;
+* Outperform existing work on unknown real-world noise. 
+
+<p float="left">
+  <img src="./figs/Figure1.png" width="800">
+  <img src="./figs/Table1.png" width="800">
+  <img src="./figs/Figure2.png" width="800">
+  <img src="./figs/Table4.png" width="800">
+  <img src="./figs/Table5.png" width="800">
+  <img src="./figs/Table6.png" width="800">
+  <img src="./figs/Table7.png" width="800">
+  <img src="./figs/Table9.png" width="800">
+</p>
+
 
 ## Extremely Simple
 
@@ -78,13 +102,6 @@ to learning from noisy labels
   ...
 
 
-## Effective (Qualitative and Quantitative Results)
-
-Please see [our paper](https://arxiv.org/pdf/1905.11233.pdf): 
-
-* Outperform existing work on synthetic label noise;
-* Outperform existing work on unknown real-world noise. 
-
 
 
 
@@ -93,7 +110,7 @@ Please kindly cite us if you find our work useful and inspiring.
 
 ```bash
 @article{wang2019emphasis,
-  title={Emphasis Regularisation by Gradient Rescaling for Training Deep Neural Networks with Noisy Labels},
+  title={Emphasis Regularisation by Gradient Rescaling for Training Deep Neural Networks Robustly},
   author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil},
   journal={arXiv preprint arXiv:1905.11233},
   year={2019}
