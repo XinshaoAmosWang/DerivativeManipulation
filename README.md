@@ -11,6 +11,59 @@ General applicability: Label noise (semantic noise),  outliers,  heavy perceptua
 
 Label noise is one of the most explicit cases where some observations and their labels are not matched in the training data. In this case, it is quite crucial to make your models learn meaningful patterns instead of errors.
 
+## Code is available now
+
+The code is simple in several lines. Please check CCE layer and GR layer for the exact differences. 
+
+The key codes are presented as follows:
+```
+  const Dtype lambda_p = this->layer_param_.loss_param().lambda_p();
+  const Dtype scale = this->layer_param_.loss_param().scale();
+
+  //non-linear transformation - exp
+  inline Dtype softmaxT(const Dtype x, const Dtype T, const Dtype base) 
+  {
+    return pow( base, T * x );
+  }
+```
+
+```
+//Forward computation p_i = prob_data[i * dim + label_value * inner_num_ + j]
+  //1. compute the weight value of one example
+  Dtype temp = softmaxT(lambda_p, Dtype(1), 
+          prob_data[i * dim + label_value * inner_num_ + j]);
+  const Dtype weight_value = softmaxT(scale * temp, 
+      		(1 - prob_data[i * dim + label_value * inner_num_ + j] ), 
+          Dtype(2.718281828));
+  
+  // 2. The loss is scaled for output. 
+  // This scaling is not important and only for output reference. It has no impact on gradient computation and back-propagation. 
+  loss -= weight_value * log(std::max(prob_data[i * dim + label_value * inner_num_ + j], Dtype(FLT_MIN)));
+
+  // 3. For normalisation purpose
+  sum_weight += weight_value; 
+  top[0]->mutable_cpu_data()[0] = loss / sum_weight;
+```
+
+```
+//Backward computation: 
+//Eq. (6) and (7) in https://arxiv.org/pdf/1905.11233.pdf
+  
+  // 1.  Gradient rescaling 
+          for (int c = 0; c < bottom[0]->shape(softmax_axis_); ++c) {
+              // Remove built-in / intrinsic weighting of CCE
+              // CCE has built-in weighting for training examples, which is well studied in the literature. 
+              bottom_diff[i * dim + c * inner_num_ + j] /= ( 2 - 2 * prob_data[i * dim + label_value * inner_num_ + j] + Dtype(1e-6) );
+
+              // New weight is imposed.
+              bottom_diff[i * dim + c * inner_num_ + j] *= weight_value;
+          }
+
+  // 2. For normalisation purpose
+  Dtype loss_weight = top[0]->cpu_diff()[0] / sum_weight;
+```
+
+
 ## Introduction
 
 * **Main contribution:** Intuitively and principally, we claim that two basic factors, what examples
