@@ -12,7 +12,8 @@ General applicability: Label noise (semantic noise),  outliers,  heavy perceptua
 Label noise is one of the most explicit cases where some observations and their labels are not matched in the training data. In this case, it is quite crucial to make your models learn meaningful patterns instead of errors.
 
 **Our work is an extension of [Improving-Mean-Absolute-Error-against-CCE](https://github.com/XinshaoAmosWang/Improving-Mean-Absolute-Error-against-CCE)**
-## Code is available now
+
+## :+1: Code is available now!
 
 **The code is extremely simple with several lines.** Please check CCE layer and GR layer for the exact differences. 
 
