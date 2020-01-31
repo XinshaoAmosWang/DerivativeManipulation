@@ -2,14 +2,14 @@
 
 Project page for [Derivative Manipulation: A General Example Weighting Framework ](https://arxiv.org/pdf/1905.11233.pdf). 
 
-### To design your own Emphasis Density Funtion and focus on Any Examples As You Need. 
+### A Framework to design your own Emphasis Density Funtion and focus on Any Examples As You Need! 
 
 
 
-## Feel free to concat me at {xwang39}@qub.ac.uk if you have any other questions
+#### Feel free to concat me at {xwang39}@qub.ac.uk if you have any other questions
 
 
-## Citation
+#### Citation
 Please kindly cite us if you find our work useful and inspiring.
 
 ```bash
