@@ -80,7 +80,7 @@ Please kindly cite us if you find our work useful and inspiring.
 
 ## Introduction
 
-* **Why:** We propose derivative manipulation (DM) for
+* **Why Derivative Manipulation:** We propose derivative manipulation (DM) for
 training accurate and robust softmax-based deep
 neural networks. Robust loss functions and example weighting are two popular solutions. Why
 derivative manipulation? (1) In gradient-based
@@ -94,7 +94,7 @@ function can be understood as a weighting scheme.
 Manipulating derivative is to adjust the weighting
 scheme.
 
-* **How:**  DM simply modifies derivative’s magnitude, including transformation and normalisation, after
+* **How to Manipulate:**  DM simply modifies derivative’s magnitude, including transformation and normalisation, after
 which derivative’s magnitude function is termed
 emphasis density function (EDF). An EDF is a formula expression of an example weighting scheme.
 We educe many options for EDFs from probability density functions (PDFs). We demonstrate
@@ -108,12 +108,12 @@ experiments.
 Please see [our paper](https://arxiv.org/pdf/1905.11233.pdf): 
 
 <p float="left">
-  <img src="./figs/1.png" width="800">
-  <img src="./figs/2.png" width="800">
-  <img src="./figs/3.png" width="800">
-  <img src="./figs/4.png" width="800">
-  <img src="./figs/5.png" width="800">
-  <img src="./figs/6.png" width="800">
+  <img src="./figs/1.png" width="400">
+  <img src="./figs/2.png" width="400">
+  <img src="./figs/3.png" width="400">
+  <img src="./figs/4.png" width="400">
+  <img src="./figs/5.png" width="400">
+  <img src="./figs/6.png" width="400">
 </p>
 
 
