@@ -126,6 +126,63 @@ Please see [our paper](https://arxiv.org/pdf/1905.11233.pdf):
 
 
 
+## Extremely Simple
+
+**Without advanced training strategies**: e.g., 
+
+  a. Iterative retraining on gradual data correction
+
+  b. Training based on carefully-designed curriculums
+
+  ...
+
+**Without using extra networks**: e.g., 
+
+  a. Decoupling" when to update" from" how to update"  
+  
+  b. Co-teaching: Robust training of deep neural networks with extremely noisy labels
+  
+  c. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels
+
+  ...
+
+**Without using extra validation sets for model optimisation**: e.g., 
+
+  a.  Learning to reweight examples for
+robust deep learning
+
+  b. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels
+
+  c. Toward robustness against label noise in training deep discriminative neural networks
+
+  d. Learning
+from noisy large-scale datasets with minimal supervision.
+
+  e. Learning from
+noisy labels with distillation. 
+
+  f. Cleannet: Transfer learning for
+scalable image classifier training with label noise
+
+  ...
+
+**Without data pruning**: e.g., 
+
+  a. Generalized cross entropy loss for training deep neural networks
+with noisy labels.   
+  ...
+
+**Without relabelling**: e.g.,
+
+  a. A semi-supervised two-stage approach
+to learning from noisy labels
+
+  b. Joint optimization framework for learning with noisy labels
+
+  ...
+
+
+
 ## References
 
 * Eran Malach and Shai Shalev-Shwartz. Decoupling" when to update" from" how to update". In
