@@ -112,8 +112,8 @@ Please see [our paper](https://arxiv.org/pdf/1905.11233.pdf):
   <img src="./figs/2.png" width="400">
   <img src="./figs/3.png" width="400">
   <img src="./figs/4.png" width="400">
-  <img src="./figs/5.png" width="400">
   <img src="./figs/6.png" width="400">
+  <img src="./figs/5.png" width="800">
 </p>
 
 
