@@ -6,7 +6,8 @@ Project page for [Derivative Manipulation: A General Example Weighting Framework
 
 
 
-#### Feel free to concat me at {xwang39}@qub.ac.uk if you have any other questions
+#### Concat
+Feel free to concat me at {xwang39}@qub.ac.uk if you have any other questions
 
 
 #### Citation
