@@ -4,6 +4,8 @@ Project page for [Derivative Manipulation: A General Example Weighting Framework
 
 ### A Framework to design your own Emphasis Density Funtion and focus on Any Examples As You Need! 
 
+### Oh, Please do not forget Emphasis Variance as well!
+
 
 
 #### Concat me
