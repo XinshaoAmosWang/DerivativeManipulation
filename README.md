@@ -1,15 +1,26 @@
-# Reweight training examples to reduce overfitting and improve generalisation
-Project page for [Emphasis Regularisation by Gradient Rescaling ](https://arxiv.org/pdf/1905.11233.pdf). 
+# Derivative Manipulation: A General Example Weighting Framework 
 
-General applicability: Label noise (semantic noise),  outliers,  heavy perceptual data noise, etc. 
+Project page for [Derivative Manipulation: A General Example Weighting Framework ](https://arxiv.org/pdf/1905.11233.pdf). 
 
-**It is reasonable to assume that there is semantic noise in large-scale training datasets**: 
-* Class labels may be missing. 
-* The labelling process may be subjective. 
+### To design your own Emphasis Density Funtion and focus on Any Examples As You Need. 
 
 
 
-Label noise is one of the most explicit cases where some observations and their labels are not matched in the training data. In this case, it is quite crucial to make your models learn meaningful patterns instead of errors.
+## Feel free to concat me at {xwang39}@qub.ac.uk if you have any other questions
+
+
+## Citation
+Please kindly cite us if you find our work useful and inspiring.
+
+```bash
+@article{wang2019emphasis,
+  title={Emphasis Regularisation by Gradient Rescaling for Training Deep Neural Networks Robustly},
+  author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil},
+  journal={arXiv preprint arXiv:1905.11233},
+  year={2019}
+}
+```
+
 
 **Our work is an extension of [Improving-Mean-Absolute-Error-against-CCE](https://github.com/XinshaoAmosWang/Improving-Mean-Absolute-Error-against-CCE)**
 
@@ -68,109 +79,49 @@ Label noise is one of the most explicit cases where some observations and their 
 
 ## Introduction
 
-* **Main contribution:** Intuitively and principally, we claim that two basic factors, what examples
-get higher weights (emphasis focus) and how large variance over examples’ weights (emphasis
-spread), should be babysit simultaneously when it comes to sample differentiation and reweighting.
-Unfortunately, these two intuitive and indispensable factors are not studied together in the literature.
+* **Why:** We propose derivative manipulation (DM) for
+training accurate and robust softmax-based deep
+neural networks. Robust loss functions and example weighting are two popular solutions. Why
+derivative manipulation? (1) In gradient-based
+optimisation, derivative other than loss value has
+direct impact on the update of a model. Therefore, we manipulate derivative directly, which is
+more straightforward than designing loss functions. (2) The loss’s derivative of an example
+defines how much impact its has on the update of
+a model, which can be interpreted as its ‘weight’.
+Therefore, a loss function’s derivative magnitude
+function can be understood as a weighting scheme.
+Manipulating derivative is to adjust the weighting
+scheme.
 
-* What training examples should be focused and how much more should they be emphasised when training DNNs under label noise? 
+* **How:**  DM simply modifies derivative’s magnitude, including transformation and normalisation, after
+which derivative’s magnitude function is termed
+emphasis density function (EDF). An EDF is a formula expression of an example weighting scheme.
+We educe many options for EDFs from probability density functions (PDFs). We demonstrate
+the effectiveness of DM empirically by extensive
+experiments.
 
-  **When noise rate is higher, we can improve a model's robustness by focusing on relatively less difficult examples.** 
+
+
+## Tables and Figures
+
+Please see [our paper](https://arxiv.org/pdf/1905.11233.pdf): 
+
+<p float="left">
+  <img src="./figs/1.png" width="800">
+  <img src="./figs/2.png" width="800">
+  <img src="./figs/3.png" width="800">
+  <img src="./figs/4.png" width="800">
+  <img src="./figs/5.png" width="800">
+  <img src="./figs/6.png" width="800">
+</p>
+
+
+
+## Additional Information
 
 [More comments and comparison with related work](https://www.researchgate.net/publication/333418661_Emphasis_Regularisation_by_Gradient_Rescaling_for_Training_Deep_Neural_Networks_with_Noisy_Labels/comments)
 
 [Paper reading about outlier detection and robust inference](https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing)
-
-
-## Effective (Qualitative and Quantitative Results)
-
-Please see [our paper](https://arxiv.org/pdf/1905.11233.pdf): 
-
-* Outperform existing work on synthetic label noise;
-* Outperform existing work on unknown real-world noise. 
-
-<p float="left">
-  <img src="./figs/Figure1.png" width="800">
-  <img src="./figs/Table1.png" width="800">
-  <img src="./figs/Figure2.png" width="800">
-  <img src="./figs/Table4.png" width="800">
-  <img src="./figs/Table5.png" width="800">
-  <img src="./figs/Table6.png" width="800">
-  <img src="./figs/Table7.png" width="800">
-  <img src="./figs/Table9.png" width="800">
-</p>
-
-
-## Extremely Simple
-
-**Without advanced training strategies**: e.g., 
-
-  a. Iterative retraining on gradual data correction
-
-  b. Training based on carefully-designed curriculums
-
-  ...
-
-**Without using extra networks**: e.g., 
-
-  a. Decoupling" when to update" from" how to update"  
-  
-  b. Co-teaching: Robust training of deep neural networks with extremely noisy labels
-  
-  c. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels
-
-  ...
-
-**Without using extra validation sets for model optimisation**: e.g., 
-
-  a.  Learning to reweight examples for
-robust deep learning
-
-  b. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels
-
-  c. Toward robustness against label noise in training deep discriminative neural networks
-
-  d. Learning
-from noisy large-scale datasets with minimal supervision.
-
-  e. Learning from
-noisy labels with distillation. 
-
-  f. Cleannet: Transfer learning for
-scalable image classifier training with label noise
-
-  ...
-
-**Without data pruning**: e.g., 
-
-  a. Generalized cross entropy loss for training deep neural networks
-with noisy labels.   
-  ...
-
-**Without relabelling**: e.g.,
-
-  a. A semi-supervised two-stage approach
-to learning from noisy labels
-
-  b. Joint optimization framework for learning with noisy labels
-
-  ...
-
-
-
-
-
-## Citation
-Please kindly cite us if you find our work useful and inspiring.
-
-```bash
-@article{wang2019emphasis,
-  title={Emphasis Regularisation by Gradient Rescaling for Training Deep Neural Networks Robustly},
-  author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil},
-  journal={arXiv preprint arXiv:1905.11233},
-  year={2019}
-}
-```
 
 
 
