@@ -110,15 +110,15 @@ loss value’s perspective, this loss function is neither symmetric or bounded, 
 derivative’s viewpoint, its gradient is so small that it almost
 has no effect on the update of a model. Therefore, the loss
 function is robust. There are many empirical evidences for
-justification: (1) (Rolnick et al., 2017) demonstrated that a
+justification: **(1) (Rolnick et al., 2017) demonstrated that a
 deep model trained by CCE is actually robust to massive
 label noise; (2) We find that CCE is very competitive versus
 MAE, MSE and GCE in our experiments where loss is the
 only variable. However, CCE is neither bounded nor symmetric. But its derivative function is bounded as shown in
-Figure 1a.
+Figure 1a.**
 
 * **Rethinking Proposed Example Weighting Schemes**: In prior work where a new example weighting is proposed,
-there is no analysis on the interaction between it and example weighting coming from a loss function. However, the example weighting defined by a loss’s derivative also varies in different loss functions, as shown in Figure 1a. Therefore, the interaction between a proposed example weighting scheme and the one from a loss function
+**there is no analysis on the interaction between it and example weighting coming from a loss function**. However, the example weighting defined by a loss’s derivative also varies in different loss functions, as shown in Figure 1a. Therefore, the interaction between a proposed example weighting scheme and the one from a loss function
 may be either positive or negative. We compare with some
 recently proposed example weighting algorithms in Table 3.
 
