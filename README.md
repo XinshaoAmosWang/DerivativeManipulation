@@ -16,9 +16,9 @@ Feel free to concat me at {xwang39}@qub.ac.uk if you have any other questions
 Please kindly cite us if you find our work useful and inspiring.
 
 ```bash
-@article{wang2019emphasis,
-  title={Emphasis Regularisation by Gradient Rescaling for Training Deep Neural Networks Robustly},
-  author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil},
+@article{wang2019derivative,
+  title={Derivative Manipulation for General Example Weighting},
+  author={Wang, Xinshao and Kodirov, Elyor and Hua, Yang and Robertson, Neil},
   journal={arXiv preprint arXiv:1905.11233},
   year={2019}
 }
