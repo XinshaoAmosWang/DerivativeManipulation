@@ -1,6 +1,9 @@
 
 # Derivative Manipulation for General Example Weighting
 
+## Downloading Link
+
+[https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0](https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0)
 
 ## To Visualise the Repository/Directory Tree Structure
 
