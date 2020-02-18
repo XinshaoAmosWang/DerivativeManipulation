@@ -28,9 +28,9 @@ Please kindly cite us if you find our work useful and inspiring.
 **Our work is an extension of [Improving-Mean-Absolute-Error-against-CCE](https://github.com/XinshaoAmosWang/Improving-Mean-Absolute-Error-against-CCE)**
 
 ## :+1: Code is available now!: 
-[Short Summary](https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/)
-[Derivative Manipulation for General Example Weighting](https://xinshaoamoswang.github.io/my_docs/DM_Code_Illustration)
-[IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters](https://xinshaoamoswang.github.io/my_docs/IMAE_Code_Illustration)
+* [Short Summary](https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/)
+* [Derivative Manipulation for General Example Weighting](https://xinshaoamoswang.github.io/my_docs/DM_Code_Illustration)
+* [IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters](https://xinshaoamoswang.github.io/my_docs/IMAE_Code_Illustration)
 
 **The code is extremely simple with several lines. The key codes are presented as follows:**
 ```
