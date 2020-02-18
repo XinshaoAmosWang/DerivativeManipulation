@@ -27,7 +27,8 @@ Please kindly cite us if you find our work useful and inspiring.
 
 **Our work is an extension of [Improving-Mean-Absolute-Error-against-CCE](https://github.com/XinshaoAmosWang/Improving-Mean-Absolute-Error-against-CCE)**
 
-## :+1: Code is available now!: [https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0](https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0)
+## :+1: Code is available now!: 
+[https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/](https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/)
 
 **The code is extremely simple with several lines. The key codes are presented as follows:**
 ```
