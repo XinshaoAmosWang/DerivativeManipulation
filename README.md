@@ -29,9 +29,7 @@ Please kindly cite us if you find our work useful and inspiring.
 
 ## :+1: Code is available now!: [https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0](https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0)
 
-**The code is extremely simple with several lines.** Please check CCE layer and GR layer for the exact differences. 
-
-**The key codes are presented as follows:**
+**The code is extremely simple with several lines. The key codes are presented as follows:**
 ```
   const Dtype lambda_p = this->layer_param_.loss_param().lambda_p();
   const Dtype scale = this->layer_param_.loss_param().scale();
