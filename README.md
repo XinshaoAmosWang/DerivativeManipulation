@@ -27,7 +27,7 @@ Please kindly cite us if you find our work useful and inspiring.
 
 **Our work is an extension of [Improving-Mean-Absolute-Error-against-CCE](https://github.com/XinshaoAmosWang/Improving-Mean-Absolute-Error-against-CCE)**
 
-## :+1: [Code is available now!](https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0)
+## :+1: Code is available now!: [https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0](https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0)
 
 **The code is extremely simple with several lines.** Please check CCE layer and GR layer for the exact differences. 
 
