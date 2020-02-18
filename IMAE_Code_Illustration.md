@@ -1,13 +1,14 @@
 
-# Derivative Manipulation for General Example Weighting
+# IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude's Variance Matters
 
 ## Downloading Link
 
-[https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0](https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0)
+[https://www.dropbox.com/sh/vb48gq7rugeugtm/AAACFbUSqAc8XNmVr_PniUena?dl=0](https://www.dropbox.com/sh/vb48gq7rugeugtm/AAACFbUSqAc8XNmVr_PniUena?dl=0)
 
-## To Visualise the Repository/Directory Tree Structure
+## Command for Visualising the Repository/Directory Tree Structure
 
 ```
+cd directory_name
 tree
 ```
 
@@ -40,26 +41,11 @@ The core functions are implemented in the [caffe](https://github.com/BVLC/caffe)
     Note you may need to change some paths in Makefile.config according your system environment and MATLAB path 
 
     ```bash
-    cd CaffeMex_CCE_sumW
-    make -j8  && make matcaffe
     cd ../CaffeMex_UnifiedWeight_V01
     make -j8  && make matcaffe
     
-    cd ../CaffeMex_GCE
-    make -j8  && make matcaffe
-    cd ../CaffeMex_GCE_sumW
-    make -j8  && make matcaffe
-    
-    cd ../CaffeMex_MAE_sumW
-    make -j8  && make matcaffe
     cd ../CaffeMex_MAE_V00
     make -j8  && make matcaffe
-    
-    cd ../CaffeMex_MSE
-    make -j8  && make matcaffe
-    cd ../CaffeMex_MSE_sumW
-    make -j8  && make matcaffe
-
     ```
 
 ## Usage
@@ -68,36 +54,28 @@ Examples for reproducing our results on [CIFAR-100](https://www.cs.toronto.edu/~
 
 * Data preparation for CIFAR-100
     
-    * Generating test data: 
+    * Prepare testing data: 
     ```
     cd CIFAR100_Data_Toolkit
     matlab -nodisplay -nosplash -nodesktop -r "run('test_data_preparation.m');exit;" | tail -n +11
     ```
 
-    * Generating training data: 
+    * Prepare training data (symmetric noise rate: 0.0, 0.2, 0.4, 0.6): 
     ```
-    % Symmetric noise rate: 0.0, 0.2, 0.4, 0.6
     matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_0.m');exit;" | tail -n +11
-
     matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_2.m');exit;" | tail -n +11
-
     matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_4.m');exit;" | tail -n +11
-
     matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_6.m');exit;" | tail -n +11
     ```
 
     * Copy data 
     ```
     cd .. 
-    echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TestImageDataCell.mat
-
-    echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.0.mat
-
-    echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.2.mat
-    
-    echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.4.mat
-
-    echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.6.mat
+    echo CIFAR100_ResNet44_V03_lambda1/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TestImageDataCell.mat
+    echo CIFAR100_ResNet44_V03_lambda1/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.0.mat
+    echo CIFAR100_ResNet44_V03_lambda1/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.2.mat
+    echo CIFAR100_ResNet44_V03_lambda1/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.4.mat
+    echo CIFAR100_ResNet44_V03_lambda1/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.6.mat
     ```
 
 * Train & Test
@@ -106,17 +84,15 @@ Examples for reproducing our results on [CIFAR-100](https://www.cs.toronto.edu/~
     
     For example, 
     ```
-    cd CIFAR100_ResNet44_V03/train_Res44_CCE_0.0
-    
+    cd CIFAR100_ResNet44_V03_lambda1/train_Res44_USW_Beta02_lambda1_0.6
     matlab -nodisplay -nosplash -nodesktop -r "run('train.m');exit;" | tail -n +11
-    
     matlab -nodisplay -nosplash -nodesktop -r "run('test.m');exit;" | tail -n +11
     ```
 
 
 ## Our trained results
 
-* Our trained results are stored in corresponding folders. For example, in Folder **CIFAR100_ResNet44_V03/train_Res44_CCE_0.0**, there are: 
+* Our trained results are stored in corresponding folders. For example, in Folder **CIFAR100_ResNet44_V03_lambda1/train_Res44_USW_Beta02_lambda1_0.6**, there are: 
     * accuracy.txt
     * accuracy_curve.png
 
