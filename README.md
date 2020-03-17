@@ -6,7 +6,7 @@ Project page for [Derivative Manipulation: A General Example Weighting Framework
 
 ### Oh, Please care Emphasis Variance as well!
 
-
+[Slide: Robust Deep Learning Improved MAE (IMAE) and Derivative Manipulation (DM): An Example Weighting Perspective](https://www.dropbox.com/s/rmjrhppyvj3enra/IMAE_DM_V01.pdf?dl=0)
 
 #### Concat me
 Feel free to concat me at {xwang39}@qub.ac.uk if you have any other questions
