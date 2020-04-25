@@ -1,8 +1,7 @@
-# Derivative Manipulation: A General Example Weighting Framework 
+# Derivative Manipulation: Example Weighting via Emphasis Density Funtion
 
 Project page for [Derivative Manipulation: A General Example Weighting Framework ](https://arxiv.org/pdf/1905.11233.pdf). 
 
-**Example Weighting via Emphasis Density Funtion.**  
 
 [Slide: Robust Deep Learning Improved MAE (IMAE) and Derivative Manipulation (DM): An Example Weighting Perspective](https://www.dropbox.com/s/rmjrhppyvj3enra/IMAE_DM_V01.pdf?dl=0)
 
