@@ -45,7 +45,7 @@ Secondly, the intuition that examples with a low "probability p_i" might be outl
 0.**In other words, it's not entirely clear how local manipulations to gradients effect the overall objective being optimized, and this is where some theoretical results showcasing the global effects of the proposed local manipulations would provide greater credibility to the method. Feel free to correct me if I have misunderstood your scheme, or if this is concern of mine is already addressed in your paper.**
 
 
-### **Personal Answer (I will provide more detailed response later)**: 
+#### **Personal Answer (I will provide more detailed response later)**: 
 * In this paper, we do not provide new theorems. Instead, our framework challenges existing theorems on loss functions, e.g., a loss function is okay to be non-symmetric, unbounded, or even non-differentiable. 
  
 * Our DM is heuristic, simple and useful in practice, without taking into consideration any assumptions on the training data. Therefore, we need a clean validation dataset to manually optimise emphasis mode and variance, and conduct model selection. 
