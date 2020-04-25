@@ -33,7 +33,7 @@ I find the high-level idea of interpreting example re-weighting as manipulation 
 
 My main concern is that this scheme is one among several heuristics one could use and does not have a strong theoretical backing. For example, what is the effective optimization problem being solved with the manipulated gradients? Can you say something about the robustness of the resulting trained model under specific assumptions on the noise in the data?
 
-0.**Concerns about weighting scheme (local changes vs global effect)**:
+1.**Concerns about weighting scheme (local changes vs global effect)**:
 I have two main comments/concern about the re-weighting scheme:
 
 Firstly, changes to the local gradients changes the landscape of the objective being optimized. I'm not sure if it's obvious that the effective optimization being solved does indeed train the model more robustly.
@@ -42,7 +42,7 @@ The authors are correct that they only change the magnitude of the gradient per-
 
 Secondly, the intuition that examples with a low "probability p_i" might be outliers and should be assigned lower weights holds true for a fully trained model. However, early on in the training process, it's quite possible that even easy examples receive a lower p_i. Wouldn't your example re-weighting scheme result in such examples being ignored as a result of the gradient magnitudes being decreased by your scheme?
 
-0.**In other words, it's not entirely clear how local manipulations to gradients effect the overall objective being optimized, and this is where some theoretical results showcasing the global effects of the proposed local manipulations would provide greater credibility to the method. Feel free to correct me if I have misunderstood your scheme, or if this is concern of mine is already addressed in your paper.**
+2.**In other words, it's not entirely clear how local manipulations to gradients effect the overall objective being optimized, and this is where some theoretical results showcasing the global effects of the proposed local manipulations would provide greater credibility to the method. Feel free to correct me if I have misunderstood your scheme, or if this is concern of mine is already addressed in your paper.**
 
 
 #### **Personal Answer (I will provide more detailed response later)**: 
