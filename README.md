@@ -62,6 +62,8 @@ Please feel free to concat me at {xwang39}@qub.ac.uk if you have any other quest
 #### Citation
 Please kindly cite us if you find our work useful and inspiring.
 
+Your star, citation, and credit will make much sense to me, and my collaborators. Especially, it will motivate me significantly. Thanks. 
+
 ```bash
 @article{wang2019derivative,
   title={Derivative Manipulation for General Example Weighting},
