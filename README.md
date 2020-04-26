@@ -48,10 +48,11 @@ Secondly, the intuition that examples with a low "probability p_i" might be outl
 #### **Personal Answer (I will provide more detailed response later)**: 
 * In this paper, we do not provide new theorems. Instead, our framework challenges existing theorems on loss functions, e.g., a loss function is okay to be non-symmetric, unbounded, or even non-differentiable. 
  
-* Our DM is heuristic, simple and useful in practice, without taking into consideration any assumptions on the training data. Therefore, we need a clean validation dataset to manually optimise emphasis mode and variance, and conduct model selection. 
+* Our DM is heuristic, simple and useful in practice, without taking into consideration any assumptions on the training data. 
 
-* **How local manipulations to gradients effect the overall objective being optimized?**: Local manipulation is the only thing we can do in deep learning optimsiation after we have chosen the network architecture. Is not it?
-
+* **How local manipulations to gradients effect the overall objective being optimized?**: 
+Local manipulation is the right thing we can do in deep learning optimsiation after we have chosen the network architecture. Is not it?
+Commom practices are: (1) Changing loss functions; (2) Output regularisation (softer targets, confidence penalty, etc)
 
 #### Concat me
 All ideas presented here are personal. 
