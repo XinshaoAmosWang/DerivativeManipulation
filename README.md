@@ -1,4 +1,4 @@
-# Derivative Manipulation: Example Weighting via Emphasis Density Funtion
+# Derivative Manipulation: Example Weighting via Emphasis Density Funtion in the context of DL
 
 Project page for [Derivative Manipulation: A General Example Weighting Framework ](https://arxiv.org/pdf/1905.11233.pdf). 
 
