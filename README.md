@@ -3,7 +3,8 @@
 Project page for [Derivative Manipulation: A General Example Weighting Framework ](https://arxiv.org/pdf/1905.11233.pdf). 
 
 
-[Slide: Robust Deep Learning Improved MAE (IMAE) and Derivative Manipulation (DM): An Example Weighting Perspective](https://www.dropbox.com/s/rmjrhppyvj3enra/IMAE_DM_V01.pdf?dl=0)
+[Slide: Example Weighting for Deep Representation
+Learning using IMAE and DM](./IMAE_DM_V03_17052020_at_KAUST_VISION-CAIR_GROUP.pdf)
 
 
 ### Questions
