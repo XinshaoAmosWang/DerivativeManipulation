@@ -1,9 +1,22 @@
 
 # Derivative Manipulation for General Example Weighting
+Preliminary: [IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude's Variance Matters](https://arxiv.org/pdf/1903.12141.pdf#arXiv%20Paper.IMAE%20for%20Noise-Robust%20Learning)
 
+For source codes, the usage is conditioned on academic use only and kindness to cite our work: Derivative Manipulation and IMAE.<br />
+As a young researcher, your interest and kind citation (star) will definitely mean a lot for me and my collaborators.<br />
+For any specific discussion or potential future collaboration, please feel free to contact me. 
+<br />
+```
+@article{wang2019derivative,
+  title={Derivative Manipulation for General Example Weighting},
+  author={Wang, Xinshao and Kodirov, Elyor and Hua, Yang and Robertson, Neil M},
+  journal={arXiv preprint arXiv:1905.11233},
+  year={2019}
+}
+```
 ## Downloading Link
 
-[https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0](https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0)
+[https://www.dropbox.com/sh/iy79ixgmtnht9qw/AAA_tQvtAi8Xy30HqPe0mGiAa?dl=0](https://www.dropbox.com/sh/iy79ixgmtnht9qw/AAA_tQvtAi8Xy30HqPe0mGiAa?dl=0)
 
 ## Command for Visualising the Repository/Directory Tree Structure
 
