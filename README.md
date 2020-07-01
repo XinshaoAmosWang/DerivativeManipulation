@@ -11,7 +11,7 @@
 * Instead in our work, we go deeper and propose a much more flexible framework **to design the derivative straightforwardly without deriving it from a loss function, [is not it very cool?](https://arxiv.org/pdf/1905.11233.pdf)**
 
 
-#### :+1: : [Code is available now!](https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/)
+#### :+1: [Code is available now!](https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/)
 
 
 ### Citation
