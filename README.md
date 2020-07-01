@@ -1,6 +1,6 @@
 # Derivative Manipulation: Example Weighting via Emphasis Density Funtion in the context of DL
 
-* [Paper](https://arxiv.org/pdf/1905.11233.pdf). 
+* [Paper](https://arxiv.org/pdf/1905.11233.pdf)
 * [Slide: Example Weighting for Deep Representation Learning using IMAE and DM](./IMAE_DM_V03_17052020_at_KAUST_VISION-CAIR_GROUP.pdf)
 
 
