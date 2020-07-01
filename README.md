@@ -1,10 +1,31 @@
 # Derivative Manipulation: Example Weighting via Emphasis Density Funtion in the context of DL
 
-Project page for [Derivative Manipulation: A General Example Weighting Framework ](https://arxiv.org/pdf/1905.11233.pdf). 
+* [Paper](https://arxiv.org/pdf/1905.11233.pdf). 
+* [Slide: Example Weighting for Deep Representation Learning using IMAE and DM](./IMAE_DM_V03_17052020_at_KAUST_VISION-CAIR_GROUP.pdf)
 
 
-[Slide: Example Weighting for Deep Representation
-Learning using IMAE and DM](./IMAE_DM_V03_17052020_at_KAUST_VISION-CAIR_GROUP.pdf)
+#### :+1: Glad to know that our recent papers have inspired an ICML 2020 paper: [Normalized Loss Functions for Deep Learning with Noisy Labels](https://arxiv.org/pdf/2006.13554.pdf)
+* [https://www.reddit.com/r/MachineLearning/comments/hjg8da/r_to_design_loss_functions_or_derivative_directly/](https://www.reddit.com/r/MachineLearning/comments/hjg8da/r_to_design_loss_functions_or_derivative_directly/)
+* This paper is still working on improving loss functions.
+
+* Instead in our work, we go deeper and propose a much more flexible framework **to design the derivative straightforwardly without deriving it from a loss function, [is not it very cool?](https://arxiv.org/pdf/1905.11233.pdf)**
+
+
+#### :+1: : [Code is available now!](https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/)
+
+
+### Citation
+Please kindly cite us if you find our work useful and inspiring.
+
+```bash
+@article{wang2019derivative,
+  title={Derivative Manipulation for General Example Weighting},
+  author={Wang, Xinshao and Kodirov, Elyor and Hua, Yang and Robertson, Neil},
+  journal={arXiv preprint arXiv:1905.11233},
+  year={2019}
+}
+```
+
 
 
 ### Questions
@@ -54,81 +75,7 @@ Secondly, the intuition that examples with a low "probability p_i" might be outl
 * **How local manipulations to gradients effect the overall objective being optimized?**: 
 Local manipulation is the right thing we can do in deep learning optimsiation after we have chosen the network architecture. Is not it?
 Commom practices are: (1) Changing loss functions; (2) Output regularisation (softer targets, confidence penalty, etc)
-
-#### Concat me
-All ideas presented here are personal. 
-Please feel free to concat me at {xwang39}@qub.ac.uk if you have any other questions to discuss wiht me. 
-
-
-#### Citation
-Please kindly cite us if you find our work useful and inspiring.
-
-Your star, citation, and credit will make much sense to me, and my collaborators. Especially, it will motivate me significantly. Thanks. 
-
-```bash
-@article{wang2019derivative,
-  title={Derivative Manipulation for General Example Weighting},
-  author={Wang, Xinshao and Kodirov, Elyor and Hua, Yang and Robertson, Neil},
-  journal={arXiv preprint arXiv:1905.11233},
-  year={2019}
-}
-```
-
-
-**Our work is an extension of [Improving-Mean-Absolute-Error-against-CCE](https://github.com/XinshaoAmosWang/Improving-Mean-Absolute-Error-against-CCE)**
-
-## :+1: Code is available now!: 
-* [Short Summary](https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/)
-* [Derivative Manipulation for General Example Weighting](https://xinshaoamoswang.github.io/my_docs/DM_Code_Illustration)
-* [IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters](https://xinshaoamoswang.github.io/my_docs/IMAE_Code_Illustration)
-
-**The code is extremely simple with several lines. The key codes are presented as follows:**
-```
-  const Dtype lambda_p = this->layer_param_.loss_param().lambda_p();
-  const Dtype scale = this->layer_param_.loss_param().scale();
-
-  //non-linear transformation - exp
-  inline Dtype softmaxT(const Dtype x, const Dtype T, const Dtype base) 
-  {
-    return pow( base, T * x );
-  }
-```
-
-```
-//Forward computation p_i = prob_data[i * dim + label_value * inner_num_ + j]
-  //1. compute the weight value of one example
-  Dtype temp = softmaxT(lambda_p, Dtype(1), 
-          prob_data[i * dim + label_value * inner_num_ + j]);
-  const Dtype weight_value = softmaxT(scale * temp, 
-      		(1 - prob_data[i * dim + label_value * inner_num_ + j] ), 
-          Dtype(2.718281828));
-  
-  // 2. The loss is scaled for output. 
-  // This scaling is not important and only for output reference. It has no impact on gradient computation and back-propagation. 
-  loss -= weight_value * log(std::max(prob_data[i * dim + label_value * inner_num_ + j], Dtype(FLT_MIN)));
-
-  // 3. For normalisation purpose
-  sum_weight += weight_value; 
-  top[0]->mutable_cpu_data()[0] = loss / sum_weight;
-```
-
-```
-//Backward computation: 
-//Eq. (6) and (7) in https://arxiv.org/pdf/1905.11233.pdf
-  
-  // 1.  Gradient rescaling 
-          for (int c = 0; c < bottom[0]->shape(softmax_axis_); ++c) {
-              // Remove built-in / intrinsic weighting of CCE
-              // CCE has built-in weighting for training examples, which is well studied in the literature. 
-              bottom_diff[i * dim + c * inner_num_ + j] /= ( 2 - 2 * prob_data[i * dim + label_value * inner_num_ + j] + Dtype(1e-6) );
-
-              // New weight is imposed.
-              bottom_diff[i * dim + c * inner_num_ + j] *= weight_value;
-          }
-
-  // 2. For normalisation purpose
-  Dtype loss_weight = top[0]->cpu_diff()[0] / sum_weight;
-```
+ 
 
 
 ## Introduction
