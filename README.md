@@ -2,9 +2,8 @@
 
 * [Paper](https://arxiv.org/pdf/1905.11233.pdf)
 * [Slide: Example Weighting for Deep Representation Learning using IMAE and DM](./IMAE_DM_V03_17052020_at_KAUST_VISION-CAIR_GROUP.pdf)
-
-
-### Code is under legal check... 
+* Code is under legal check... 
+* This work has contributed to my PhD thesis: [Example Weighting for Deep Representation Learning](https://pure.qub.ac.uk/en/studentTheses/example-weighting-for-deep-representation-learning). Therefore, this work passed the review/examination. Please feel safe to cite our work. 
 
 
 #### :+1: Glad to know that our recent papers have inspired an ICML 2020 paper: [Normalized Loss Functions for Deep Learning with Noisy Labels](https://arxiv.org/pdf/2006.13554.pdf)
@@ -13,8 +12,9 @@
 
 * Instead in our work, we go deeper and propose a much more flexible framework **to design the derivative straightforwardly without deriving it from a loss function, [is not it very cool?](https://arxiv.org/pdf/1905.11233.pdf)**
 
-
+<!--
 #### :+1: [Code is available now!](https://xinshaoamoswang.github.io/blogs/2020-06-14-code-releasing/)
+-->
 
 
 ### Citation
