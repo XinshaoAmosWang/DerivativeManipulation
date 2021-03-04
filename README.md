@@ -5,6 +5,12 @@
 * Code is under legal check... 
 * This work has contributed to my PhD thesis: [Example Weighting for Deep Representation Learning](https://pure.qub.ac.uk/en/studentTheses/example-weighting-for-deep-representation-learning). Therefore, this work passed the review/examination. Please feel safe to cite our work. 
 
+#### CVPR 2021 Review Logs
+* [DM_cvpr11436_submission.pdf](./CVPR-2021-Review-Logs/DM_cvpr11436_submission.pdf)
+* [DM-Reviews-CVPR21.pdf](./CVPR-2021-Review-Logs/DM-Reviews-CVPR21.pdf)
+* [DM-MetaReviews-CVPR21.pdf](./CVPR-2021-Review-Logs/DM-MetaReviews-CVPR21.pdf)
+* [DM_11436_rebuttal_v03.pdf](./CVPR-2021-Review-Logs/DM_11436_rebuttal_v03.pdf)
+
 
 #### :+1: Glad to know that our recent papers have inspired an ICML 2020 paper: [Normalized Loss Functions for Deep Learning with Noisy Labels](https://arxiv.org/pdf/2006.13554.pdf)
 * [Open discussion on deep robustness, please!](https://www.reddit.com/r/MachineLearning/comments/hjlayq/r_open_discussion_on_deep_robustness_please/)
